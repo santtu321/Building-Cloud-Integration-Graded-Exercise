@@ -198,6 +198,9 @@ app.get('/postings', (req, res) =>{
     res.send("heres all postings !")
 
 })
+app.get('/', (req, res) =>{
+    res.send("Welcome!")
+})
 app.listen(app.get('port'), function() {
   console.log(`Example app listening at port`, app.get('port'))
 })

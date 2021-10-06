@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const Ajv = require('ajv');
 const ajv = new Ajv();
-const port = 3000
 const passport = require('passport');
 const BasicStrategy = require('passport-http').BasicStrategy;
 const bodyParser = require('body-parser');
@@ -199,6 +198,6 @@ app.get('/postings', (req, res) =>{
     res.send("heres all postings !")
 
 })
-app.listen(app.get('port'), function() => {
+app.listen(app.get('port'), function() {
   console.log(`Example app listening at port`, app.get('port'))
 })

@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 let userDb = [];
 //let postingsDb = [];
 
+app.set('port', (process.env.PORT || 80));
+
 passport.use(new BasicStrategy(
 
     (email, password, done) => {

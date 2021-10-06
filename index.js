@@ -199,6 +199,6 @@ app.get('/postings', (req, res) =>{
     res.send("heres all postings !")
 
 })
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(app.get('port'), function() => {
+  console.log(`Example app listening at port`, app.get('port'))
 })
